@@ -47,11 +47,6 @@
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
     public static int reverse(int x) {
-        double c = Math.pow(2, 31);
-
-        if (x<= -c || x>= c-1)
-        {return 0;}
-
         //判断不为空
         int last ;
         int flag ;
@@ -87,7 +82,7 @@ class Solution {
 
             } catch (NumberFormatException e) {
 
-                e.printStackTrace();
+                return  0;
 
             }
 
