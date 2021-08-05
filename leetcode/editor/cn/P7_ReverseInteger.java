@@ -43,9 +43,11 @@
 // Related Topics 数学 
 // 👍 2973 👎 0
 
+import java.util.ArrayList;
+import java.util.List;
 
 //leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
+class reverse {
     public static int reverse(int x) {
         //判断不为空
         int last ;

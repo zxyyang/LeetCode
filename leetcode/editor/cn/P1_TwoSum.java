@@ -45,7 +45,7 @@
 
 
 //leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
+class twoSum {
     public int[] twoSum(int[] nums, int target) {
 
 
