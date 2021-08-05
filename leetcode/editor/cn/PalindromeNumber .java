@@ -48,6 +48,8 @@
 // Related Topics 数学 
 // 👍 1572 👎 0
 
+  import java.util.ArrayList;
+  import java.util.List;
 
   class PalindromeNumber{
       public static void main(String[] args) {
@@ -56,10 +58,30 @@
       //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
     public boolean isPalindrome(int x) {
+        String str = String.valueOf(x);
+
+        String[] befor =str.split("");
+        String[] after = new String[befor.length];
+
+         String A = new String();
+        String B = new String();
+     for(int i =0 ; i<befor.length;i++){
+         after[befor.length-1-i ] = befor[i];
+
+     }
+     for (int j =0; j< befor.length;j++){
+         A = A+after[j];
+         B = B+befor[j];
+     }
 
 
+        if (A.equals(B)){
+            return  true;
+        }
+        else {
 
-        return true;
+            return false;
+        }
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)
