@@ -30,22 +30,55 @@
 // Related Topics 字符串 
 // 👍 1713 👎 0
 
-  
- class LongestCommonPrefix{
+  import java.util.ArrayList;
+  import java.util.List;
+
+  class LongestCommonPrefix{
       public static void main(String[] args) {
            Solution solution = new LongestCommonPrefix().new Solution();
+          String[] strings = {"ab","a"};
+          System.out.println(solution.longestCommonPrefix(strings));
       }
       //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
     public String longestCommonPrefix(String[] strs) {
-        StringBuilder sb = new StringBuilder();
+        String result = "";
+        String[] one= strs[0].split("");
+        for(int i=1;i<strs.length;i++){
+            String[]tow =  toString(strs[i]);
+            int len = one.length;
+            if (tow.length < len){
+                len = tow.length;
+            }
+            int aa = 0;
+            for (int j=0;j<len;j++){
+                if(one[j].equals(tow[j])){
+                    aa++;
+                }else {
+                    for (int k =j+1;k<one.length;k++) {
+                        one[k] = "";
+                    }
+                }
+            }
+            for (int j = aa; j < len;j++){
+                one[j] = "";
+            }
 
+        }
 
+        for (String re : one){
+            result = result+re;
+        }
 
-
-
-        return   String.valueOf(sb);
+        return   String.valueOf(result);
     }
+
+          public  String[] toString(String str) {
+              String[] strs = str.split("");
+
+
+              return strs;
+          }
 }
 //leetcode submit region end(Prohibit modification and deletion)
 
