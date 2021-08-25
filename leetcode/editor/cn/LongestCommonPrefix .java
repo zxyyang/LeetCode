@@ -36,8 +36,8 @@
   class LongestCommonPrefix{
       public static void main(String[] args) {
            Solution solution = new LongestCommonPrefix().new Solution();
-          String[] strings = {"ab","a"};
-          System.out.println(solution.longestCommonPrefix(strings));
+          String[] strings = {"flower","flow","flight"};
+         System.out.println(solution.longestCommonPrefix(strings));
       }
       //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
