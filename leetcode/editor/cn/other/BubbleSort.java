@@ -10,7 +10,7 @@ public class BubbleSort {
             return;
         }
             if (arr.length <1 ) return;
-            for (int i = 0; i < arr.length; i++) {
+            for (int i = 0; i < arr.length -1; i++) {
            //     boolean flag = false;
                 for (int j = 0; j < arr.length - i - 1; j++) {
                     //数组下标又是从0开始的，
